@@ -1,0 +1,19 @@
+
+form fieldset { padding: 20px; }
+div.control-group { margin-bottom: 20px; }
+div.control-group label.control-label { width: 300px; }
+div.control-group div.controls { width: 400px; }
+div.controls span { color: red; font-size: 0.8em; }
+
+div.container { margin: 0 auto; width: 940px; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1 { border-bottom: 1px solid #eee; padding-bottom: 13px; }
+h1 small { font-size: 0.6em; color: #ccc; }
+
+
+table {width: 300px;}
+ tr:nth-child(odd)  {background-color: #eee;}
+ tr:nth-child(even) {background-color: #fff;}
