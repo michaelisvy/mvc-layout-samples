@@ -7,7 +7,7 @@
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>
-				/WEB-INF/app-config.xml
+				/WEB-INF/mvc-config.xml, /WEB-INF/spring-tiles-config.xml
 			</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>

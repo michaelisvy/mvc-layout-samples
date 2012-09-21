@@ -9,8 +9,8 @@
 	</head>
 <body>
 	<div class="container" style="padding-top: 50px;">
-		<jsp:include page="../menu.jsp"/>	
+		<jsp:include page="/WEB-INF/view/jsp/menu.jsp"/>	
 			<jsp:doBody />
-		<jsp:include page="../footer.jsp"/>	
+		<jsp:include page="/WEB-INF/view/jsp/footer.jsp"/>	
 	</div>
 </body>

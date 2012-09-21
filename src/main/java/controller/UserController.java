@@ -21,9 +21,15 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/users/all/custom-tags",method=RequestMethod.GET)
-	public String findUsers(Model model){
+	public String findUsersTags(Model model){
 		buildUserList(model);
 		return "02-custom-tags/users";
+	}
+	
+	@RequestMapping(value="/users/all/tiles",method=RequestMethod.GET)
+	public String findUsersTiles(Model model){
+		buildUserList(model);
+		return "tiles/users";
 	}
 
 	private void buildUserList(Model model) {
