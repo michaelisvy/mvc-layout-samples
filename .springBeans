@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/main/webapp/WEB-INF/mvc-config.xml</config>
+		<config>src/main/webapp/WEB-INF/spring-mvc-config.xml</config>
 	</configs>
 	<configSets>
 	</configSets>

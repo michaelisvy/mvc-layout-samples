@@ -5,17 +5,17 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 
-<html>
+<html> 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<spring:url value="/style" var="styleUrl" />
 		<link href="${styleUrl}/app.css" rel="stylesheet">
-		<title><tiles:importAttribute name="title" /></title>
+		<title>${title}</title>
 	</head>
 	<body>
 		<div class="container" style="padding-top: 50px;">
 			<jsp:include page="/WEB-INF/view/jsp/menu.jsp"/>	
-				<tiles:insertAttribute name="main" />
+			<tiles:insertAttribute name="main" />
 			<jsp:include page="/WEB-INF/view/jsp/footer.jsp"/>	
 		</div>
 	</body>

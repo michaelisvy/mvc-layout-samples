@@ -17,19 +17,29 @@ public class UserController {
 	@RequestMapping(value="/users/all/jsp-plain",method=RequestMethod.GET)
 	public String findUsersPlain(Model model){
 		buildUserList(model);
+		model.addAttribute("title", "Users List - Plain JSP");
 		return "01-plain/users";
 	}
 	
 	@RequestMapping(value="/users/all/custom-tags",method=RequestMethod.GET)
 	public String findUsersTags(Model model){
 		buildUserList(model);
+		model.addAttribute("title", "Users List - Custom tags");
 		return "02-custom-tags/users";
 	}
 	
 	@RequestMapping(value="/users/all/tiles",method=RequestMethod.GET)
 	public String findUsersTiles(Model model){
 		buildUserList(model);
+		model.addAttribute("title", "Users List - Tiles");
 		return "tiles/users";
+	}
+	
+	@RequestMapping(value="/users/all/thymeleaf",method=RequestMethod.GET)
+	public String findUsersThymeLeaf(Model model){
+		buildUserList(model);
+		model.addAttribute("title", "Users List - Thymeleaf");
+		return "thymeleaf/users";
 	}
 
 	private void buildUserList(Model model) {
