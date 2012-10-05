@@ -1,5 +1,5 @@
-
 form fieldset { padding: 20px; }
+
 div.control-group { margin-bottom: 20px; }
 div.control-group label.control-label { width: 300px; }
 div.control-group div.controls { width: 400px; }
@@ -14,6 +14,8 @@ h1 { border-bottom: 1px solid #eee; padding-bottom: 13px; }
 h1 small { font-size: 0.6em; color: #ccc; }
 
 
-table {width: 300px;}
- tr:nth-child(odd)  {background-color: #eee;}
- tr:nth-child(even) {background-color: #fff;}
+table { width: 300px; }
+table thead th { height: 30px; }
+table thead td { height: 22px; }
+tr:nth-child(odd)  { background-color: #eee; }
+tr:nth-child(even) { background-color: #fff; }

@@ -1,24 +1,21 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
-<head id="headerFragment" th:fragment="headerFragment">
-
-<div class="header well">
-	<img th:src="@{/images/springsource_banner_green.png}"/>
-	<link th:src="@{/style/app.css}" rel="stylesheet"/>
-	<div class="page-header">
-		<h1 th:text="${title}"/>
-	</div>	
-	<ul>
-		<li><a th:href="@{/users/all/jsp-plain.htm}">No template</a></li>
-		<li><a th:href="@{/users/all/custom-tags.htm}">Custom tags</a></li>
-		<li><a th:href="@{/users/all/tiles.htm}">Apache Tiles</a></li>
-		<li><a th:href="@{/users/all/thymeleaf.htm}">Thymeleaf</a></li>
-	</ul>
-</div>
-
-</head>
-<body>
-	<div class="container">
-	</div>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+	<head id="headerFragment" th:fragment="headerFragment">
+		<div class="header well">
+			<img th:src="@{/images/springsource_banner_green.png}"/>
+			<link th:src="@{/style/app.css}" rel="stylesheet"/>
+			<div class="page-header">
+				<h1 th:text="${title}"/>
+			</div>	
+			<ul>
+				<li><a th:href="@{/users/all/jsp-plain.htm}">No template</a></li>
+				<li><a th:href="@{/users/all/custom-tags.htm}">Custom tags</a></li>
+				<li><a th:href="@{/users/all/tiles.htm}">Apache Tiles</a></li>
+				<li><a th:href="@{/users/all/thymeleaf.htm}">Thymeleaf</a></li>
+			</ul>
+		</div>
+	</head>
+	
+	<body>
+		<div class="container"></div>
+	</body>
 </html>
