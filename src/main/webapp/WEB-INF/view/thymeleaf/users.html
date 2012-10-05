@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head th:include="thymeleaf/menu :: headerFragment">
-        <title>${title}</title>  
+    <head th:include="thymeleaf/layout :: headerFragment">
     </head>
     
     <body> 
+		
+		<div th:include="thymeleaf/layout :: menuFragment">
+		</div>
 		<div th:if="${#lists.isEmpty(users)}">
 			Table is empty.
 		</div>
