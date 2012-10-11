@@ -11,6 +11,6 @@
 		<title>Index</title>
 	</head>
 	<body>
-		<jsp:include page="WEB-INF/view/jsp/menu.jsp"/>
+		<jsp:include page="WEB-INF/view/jsp/menu.jspx"/>
 	</body>
 </html>

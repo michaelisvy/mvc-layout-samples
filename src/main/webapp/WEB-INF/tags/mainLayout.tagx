@@ -1,0 +1,23 @@
+<html xmlns:c="http://java.sun.com/jsp/jstl/core"  
+xmlns:spring="http://www.springframework.org/tags" 
+xmlns:jsp="http://java.sun.com/JSP/Page">
+
+	
+	<jsp:directive.attribute name="title" type="java.lang.String" required="true" rtexprvalue="true" description="Title for the page"/>
+  
+	
+	<head>
+		<meta charset="utf-8"/>
+		<title>${title}</title>
+		<spring:url value="/style" var="styleUrl" />
+		<link href="${styleUrl}/app.css" rel="stylesheet"/>
+	</head>
+	
+	<body>
+		<div class="container" style="padding-top: 50px;">
+			<jsp:include page="/WEB-INF/view/jsp/menu.jspx"/>	
+				<jsp:doBody />
+			<jsp:include page="/WEB-INF/view/jsp/footer.jspx"/>	
+		</div>
+	</body>
+</html>

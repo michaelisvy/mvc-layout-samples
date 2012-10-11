@@ -1,0 +1,28 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"  
+xmlns:spring="http://www.springframework.org/tags" 
+xmlns:jsp="http://java.sun.com/JSP/Page">
+
+	<jsp:directive.attribute name="collection" type="java.util.Collection" required="true" rtexprvalue="true" description="Message is displayed in case the collection is null"/>
+	<jsp:directive.attribute name="headerLabels" required="true" rtexprvalue="true" description="Comma separated list"/>
+
+	<c:choose>
+	   <c:when test="${empty collection}">
+	        Table is empty.
+	   </c:when>
+	   <c:otherwise>
+	 		<table>
+				<thead>
+			        <tr>
+			        	<c:forEach items="${headerLabels}" var="label">
+							<th> ${label} </th>
+						</c:forEach>
+			        </tr>
+				</thead>
+			    <tbody>
+					<jsp:doBody />
+	 			</tbody>
+			</table>  		
+	    </c:otherwise>
+	</c:choose>
+
+</div>
