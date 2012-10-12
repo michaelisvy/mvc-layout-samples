@@ -3,8 +3,7 @@ xmlns:spring="http://www.springframework.org/tags"
 xmlns:jsp="http://java.sun.com/JSP/Page">
 
 	
-	<jsp:directive.attribute name="title" type="java.lang.String" required="true" rtexprvalue="true" description="Title for the page"/>
-  
+	<jsp:directive.attribute name="title" required="true" rtexprvalue="true" description="Title for the page"/> 
 	
 	<head>
 		<meta charset="utf-8"/>

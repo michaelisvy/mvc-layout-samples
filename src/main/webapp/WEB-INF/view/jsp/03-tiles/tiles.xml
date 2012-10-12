@@ -4,7 +4,7 @@
 
 <tiles-definitions>
 
-	<definition name="tiles/*" template="/WEB-INF/view/jsp/03-tiles/standard-layout.jspx">
+	<definition name="tiles/*" template="/WEB-INF/view/jsp/03-tiles/layout.jspx">
 		<put-attribute name="main" value="/WEB-INF/view/jsp/03-tiles/{1}.jspx" />
 	</definition>
 	
