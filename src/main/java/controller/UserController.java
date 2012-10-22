@@ -73,6 +73,8 @@ public class UserController {
 		users.add(new User("Mike", "Wiesner"));
 		users.add(new User("Mark", "Secrist"));
 		users.add(new User("Ken", "Krueger"));
+		users.add(new User("Wes", "Gruver"));
+		users.add(new User("Kevin", "Crocker"));
 		model.addAttribute("users", users);
 	}
 	
