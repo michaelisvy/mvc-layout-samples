@@ -7,7 +7,7 @@ xmlns:jsp="http://java.sun.com/JSP/Page">
 	
 	<head>
 		<meta charset="utf-8"/>
-		<title>${title}</title>
+		<title><c:out value="${title}"/></title>
 		<spring:url value="/style" var="styleUrl" />
 		<link href="${styleUrl}/app.css" rel="stylesheet"/>
 	</head>
