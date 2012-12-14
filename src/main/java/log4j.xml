@@ -14,7 +14,7 @@
 
 
 	<logger name="org.springframework.web">
-		<level value="info" />
+		<level value="trace" />
 	</logger>
 
 	

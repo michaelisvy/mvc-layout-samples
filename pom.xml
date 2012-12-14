@@ -7,13 +7,17 @@
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>AjaxDemo</name>
+	<name>mvc-layout-samples</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.framework.version>3.1.2.RELEASE</spring.framework.version>
- 		<tiles.version>2.2.2</tiles.version>
+		<spring.framework.version>3.2.0.RELEASE</spring.framework.version>
+		<!-- 3.2.0.RC1 3.1.2.RELEASE -->
+		
+		<!-- 2 versions of Tiles because we have 2 profiles -->
+ 		<tiles2.version>2.2.2</tiles2.version>
+ 		<tiles3.version>3.0.1</tiles3.version>
  		<slf4j.version>1.7.0</slf4j.version>
  		<log4j.version>1.2.17</log4j.version>
  		<thymeleaf.version>2.0.13</thymeleaf.version>
@@ -92,11 +96,8 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
-			<groupId>org.apache.tiles</groupId>
-			<artifactId>tiles-jsp</artifactId>
-			<version>${tiles.version}</version>
-		</dependency>
+		
+		
 				
 		<dependency>
 			<groupId>junit</groupId>
@@ -138,9 +139,50 @@
 		    <artifactId>thymeleaf-spring3</artifactId>
 		    <version>${thymeleaf.version}</version>
 		</dependency>
-
-
-
 	</dependencies>
+	
+	<!-- Here we can choose between Tiles2 and Tiles3 -->
+	<profiles>
+		<profile>
+	      <id>tiles2</id>
+	      <activation>
+	      	<activeByDefault>false</activeByDefault>
+	      </activation>
+	      <dependencies>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-jsp</artifactId>
+				<version>${tiles2.version}</version>
+			</dependency>
+	      </dependencies>     
+    	</profile>
+		<profile>
+	      <id>tiles3</id>
+	      <activation>
+	      	<activeByDefault>true</activeByDefault>
+	      </activation>
+	      <dependencies>
+			<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-jsp</artifactId>
+				<version>${tiles3.version}</version>
+			</dependency>
+	      	<dependency>
+				<groupId>org.apache.tiles</groupId>
+				<artifactId>tiles-request-servlet-wildcard</artifactId>
+				<version>1.0.2</version>
+				<exclusions>
+					<exclusion>
+						<groupId>org.apache.tiles</groupId>
+						<artifactId>tiles-request-servlet</artifactId>
+					</exclusion>
+					<exclusion>
+						<groupId>org.springframework</groupId>
+						<artifactId>spring-web</artifactId>
+					</exclusion>
+				</exclusions>
+			</dependency>
+	      </dependencies>     
+    	</profile>	</profiles>
 	
 </project>
