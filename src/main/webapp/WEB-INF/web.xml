@@ -4,7 +4,7 @@
 	<display-name>mvc-layout-samples</display-name>
 	<context-param>
 		<param-name>spring.profiles.active</param-name>
-		<param-value>tiles2</param-value>
+		<param-value>tiles3</param-value>
 	</context-param>
 	<servlet>
 		<servlet-name>DispatcherServlet</servlet-name>
