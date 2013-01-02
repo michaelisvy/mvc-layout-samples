@@ -19,7 +19,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DispatcherServlet</servlet-name>
-		<url-pattern>*.xml</url-pattern>
+		<url-pattern>*.htm</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>DispatcherServlet</servlet-name>
