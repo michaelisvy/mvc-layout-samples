@@ -2,9 +2,23 @@ Before installing those samples please make sure that Maven and git have been in
 
 You can do:
 
+Option A) All in Eclipse
+
+Make sure that Eclipse Maven Integration (m2e) is installed. http://www.eclipse.org/m2e/
+(You should have m2 icon in Help -> About dialog)
+
+Import -> Maven \ Check out Maven project from SCM
+Select git (For the first time click 'Add more SCM connectors from m2e marketspace' link )
+Enter Git repository URL into next field: git@github.com:michaelisvy/mvc-layout-samples.git
+
+Option B) Using Git console
 git clone git@github.com:michaelisvy/mvc-layout-samples.git
 cd mvc-layout-samples
 mvn eclipse:eclipse
 
+NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.
+
 Your project is now ready to be imported into Eclipse.
 File -> Import -> Existing project into Eclipse
+
+
